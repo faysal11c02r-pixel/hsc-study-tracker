@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Same head as index.html -->
+  <title>Dashboard</title>
+</head>
+<body>
+  <div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Dashboard</span>
+        <div class="mdl-layout-spacer"></div>
+        <button id="logout" class="mdl-button">Logout</button>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <!-- Input Form -->
+      <div class="input-card mdl-card">
+        <form id="studyForm">
+          <select id="subject" class="mdl-textfield__input">
+            <option>Physics</option><option>Chemistry</option><option>Higher Math</option><option>Biology</option><option>English</option><option>Bangla</option><option>ICT</option>
+          </select>
+          <input id="chapter" type="text" placeholder="Chapter">
+          <input id="timeSpent" type="number" placeholder="Minutes">
+          <button type="submit" class="mdl-button mdl-button--colored">Log Study</button>
+        </form>
+      </div>
+      <!-- AI Plan -->
+      <div id="aiPlan" class="mdl-card"></div>
+      <!-- Analytics -->
+      <canvas id="chart"></canvas> <!-- Use Chart.js CDN for graphs -->
+      <div id="stats"></div>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
